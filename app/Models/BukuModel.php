@@ -9,7 +9,7 @@ class BukuModel extends Model
     protected $table = 'buku';
     protected $primaryKey = 'id_buku';
     protected $useTimestamps = true;
-    protected $allowedFields = ['judul_buku', 'slug', 'penulis', 'penerbit', 'cover'];
+    protected $allowedFields = ['judul', 'slug', 'penulis', 'penerbit', 'cover'];
 
     public function getBuku($slug = false)
     {

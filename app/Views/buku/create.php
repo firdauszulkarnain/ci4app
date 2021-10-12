@@ -10,25 +10,28 @@
                 <div class="form-group row">
                     <label for="judul" class="col-sm-2 col-form-label">Judul</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="judul" name="judul" autofocus autocomplete="off">
+                        <input type="text" class="form-control <?= ($validation->hasError('judul')) ? 'is-invalid' : ''; ?>" id="judul" name="judul" autofocus autocomplete="off" value="<?= old('judul') ?>">
+                        <div class="invalid-feedback">
+                            <?= $validation->getError('judul'); ?>
+                        </div>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="penulis" class="col-sm-2 col-form-label">Penulis</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="penulis" name="penulis" autocomplete="off">
+                        <input type="text" class="form-control" id="penulis" name="penulis" autocomplete="off" value="<?= old('penulis') ?>">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="penerbit" class="col-sm-2 col-form-label">Penerbit</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="penerbit" name="penerbit" autocomplete="off">
+                        <input type="text" class="form-control" id="penerbit" name="penerbit" autocomplete="off" value="<?= old('penerbit') ?>">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="cover" class="col-sm-2 col-form-label">Cover</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="cover" name="cover" autocomplete="off">
+                        <input type="text" class="form-control" id="cover" name="cover" autocomplete="off" value="<?= old('cover') ?>">
                     </div>
                 </div>
                 <div class="form-group row">

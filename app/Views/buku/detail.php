@@ -12,7 +12,7 @@
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title"><?= $buku['judul_buku'] ?></h5>
+                            <h5 class="card-title"><?= $buku['judul'] ?></h5>
                             <p class="card-text"><b>Penulis : </b> <?= $buku['penulis'] ?></p>
                             <p class="card-text"><small class="text-muted"><b>Penerbit : </b> <?= $buku['penerbit']; ?></small></p>
 

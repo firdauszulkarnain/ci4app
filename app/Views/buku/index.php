@@ -26,7 +26,7 @@
                         <tr>
                             <td><?= $i ?></td>
                             <td><img src="img/<?= $row['cover'] ?>" alt="" class="cover"></td>
-                            <td><?= $row['judul_buku'] ?></td>
+                            <td><?= $row['judul'] ?></td>
                             <td>
                                 <a href="/buku/<?= $row['slug']; ?>" class="btn btn-success">Detail</a>
                             </td>
