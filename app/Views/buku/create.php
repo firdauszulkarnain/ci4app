@@ -19,13 +19,19 @@
                 <div class="form-group row">
                     <label for="penulis" class="col-sm-2 col-form-label">Penulis</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="penulis" name="penulis" autocomplete="off" value="<?= old('penulis') ?>">
+                        <input type="text" class="form-control <?= ($validation->hasError('penulis')) ? 'is-invalid' : ''; ?>" id="penulis" name="penulis" autocomplete="off" value="<?= old('penulis') ?>">
+                        <div class="invalid-feedback">
+                            <?= $validation->getError('penulis'); ?>
+                        </div>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="penerbit" class="col-sm-2 col-form-label">Penerbit</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="penerbit" name="penerbit" autocomplete="off" value="<?= old('penerbit') ?>">
+                        <input type="text" class="form-control <?= ($validation->hasError('penerbit')) ? 'is-invalid' : ''; ?>" id="penerbit" name="penerbit" autocomplete="off" value="<?= old('penerbit') ?>">
+                        <div class="invalid-feedback">
+                            <?= $validation->getError('penerbit'); ?>
+                        </div>
                     </div>
                 </div>
                 <div class="form-group row">

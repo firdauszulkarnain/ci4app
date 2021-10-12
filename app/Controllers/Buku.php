@@ -52,13 +52,20 @@ class Buku extends BaseController
 
         // Validasi Input
         if (!$this->validate([
-            // 'judul' => 'is_unique[buku.judul]|required'
             'judul' => [
                 'rules' => 'is_unique[buku.judul]|required',
                 'errors' => [
                     'required' => '{field} Harus Diisi',
                     'is_unique' => '{field} Sudah Ada'
                 ]
+            ],
+            'penerbit' => [
+                'rules' => 'required',
+                'errors' => ['required' => '{field} Harus Diisi']
+            ],
+            'penulis' => [
+                'rules' => 'required',
+                'errors' => ['required' => '{field} Harus Diisi']
             ]
         ])) {
             $validation = \Config\Services::validation();
