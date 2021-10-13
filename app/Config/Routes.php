@@ -2,6 +2,8 @@
 
 namespace Config;
 
+use CodeIgniter\Commands\Utilities\Routes;
+
 // Create a new instance of our RouteCollection class.
 $routes = Services::routes();
 
@@ -33,8 +35,9 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Pages::index');
 $routes->get('/buku/create', 'Buku::create');
-$routes->post('buku/save', 'Buku::save');
-$routes->get('/buku/(:segment)', 'Buku::detail/$1');
+$routes->post('/buku/save', 'Buku::save');
+$routes->delete('/buku/(:num)', 'Buku::delete/$1');
+$routes->get('/buku/(:any)', 'Buku::detail/$1');
 
 /*
  * --------------------------------------------------------------------

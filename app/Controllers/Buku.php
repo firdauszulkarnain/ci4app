@@ -83,4 +83,11 @@ class Buku extends BaseController
         session()->setFlashdata('pesan', 'Data Berhasil Ditambahkan');
         return redirect()->to('/buku');
     }
+
+    public function delete($id_buku)
+    {
+        $this->bukuModel->delete($id_buku);
+        session()->setFlashdata('pesan', 'Data Berhasil Dihapus');
+        return redirect()->to('/buku');
+    }
 }
